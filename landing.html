@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Link Page</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" crossorigin="anonymous">
+    <link rel="preload" href="css/main.css" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="css/landing.css" crossorigin="anonymous" async>
+    <script src="js/landing.js" crossorigin="anonymous" async></script>
+  </head>
+  <body class="landing-page">
+    <div id="wrapper">
+      <div id="Landbox">
+        <div id="landing-container">
+          <h1 id="message"></h1>
+          <p id="landingLink">
+            <a href="#" rel="nofollow next" referrerpolicy="same-origin"></a>
+          </p>
+          <p id="password-protected">
+            <span class="link-label">Password protected: </span>
+            <span class="link-value"></span>
+          </p>
+          <p id="time-limit">
+            <span class="link-label">Time limit: </span>
+            <span class="link-value"></span>
+          </p>
+          <p id="uses">
+            <span class="link-label">Uses: </span>
+            <span class="link-value"></span>
+          </p>
+        </div>
+        <button id="back-button" aria-label="Go Back">Go Back</button>
+        <div id="error-message" role="alert"></div>
+      </div>
+    </div>
+  </body>
+</html>

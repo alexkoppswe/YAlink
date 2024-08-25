@@ -1,0 +1,39 @@
+/* Styles for landing.html */
+.landing-page {
+  background: linear-gradient(to bottom right, purple, violet);
+}
+
+.landing-page #wrapper {
+  background-color: rgba(90, 0, 90, 0.2);
+}
+
+.landing-page h1 {
+  color: #3e0b3e;
+}
+
+.landing-page .link-label {
+  color: #3e0b3e;
+}
+
+.landing-page a:hover {
+  color: #960e9682;
+}
+
+.landing-page a:visited {
+  color: #e87ee878;
+}
+
+.landing-page input[type="submit"] {
+  background-color: #321c3b;
+  color: white;
+}
+
+.landing-page input[type="submit"]:hover {
+  background-color: #8d318d;
+  color: #511551;
+}
+
+.landing-page #error-message {
+  color: #3e0b3e;
+  text-shadow: #b974be8a 1px 1px 0px;
+}

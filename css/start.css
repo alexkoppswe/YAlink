@@ -1,0 +1,90 @@
+/* Styles for index.html */
+
+#advancePreMenu {
+  margin: 4px auto;
+}
+
+#advancePreMenu span {
+  font-size: 1em;
+  font-weight: bold;
+  color: #c4d0e0;
+  text-shadow: #3e3f40 1px 1px 0px;
+}
+
+#toggle-advanced-btn {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  padding: 0 0 2px 2px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#toggle-advanced-btn:before {
+  content: '\25B6';
+}
+
+#advanced-settings {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+#advanced-settings:not(.collapsed) {
+  max-height: 300px;
+}
+
+#link-form #url::placeholder {
+  font-style: italic;
+}
+
+.password-container {
+  display: inline-flex;
+  width: 100%;
+}
+
+.password-container #password::placeholder {
+  font-style: italic;
+}
+
+#toggle-password-btn {
+  margin-left: 10px;
+  width: 40px;
+  cursor: pointer;
+}
+
+/* Page color style */
+.index-page {
+  background: linear-gradient(to bottom right, darkblue, lightblue);
+}
+
+.index-page #wrapper {
+  background-color: rgba(0, 0, 91, 0.2);
+}
+
+.index-page h1,
+.index-page p {
+  color: #0c0c3e;
+}
+
+.index-page #advanced-settings label {
+  color: #d2d3fc;
+  text-shadow: #464648 1px 1px 0px;
+}
+
+.index-page input[type="submit"] {
+  background-color: #242f6c;
+  color: white;
+}
+
+.index-page input[type="submit"]:hover {
+  background-color: lightblue;
+  color: steelblue;
+}
+
+.index-page #error-message {
+  color: #171761;
+  text-shadow: #3c4ca396 1px 1px 0px;
+}

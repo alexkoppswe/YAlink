@@ -1,0 +1,47 @@
+/* Styles for link.html */
+.link-page {
+  background: linear-gradient(to bottom right, darkgreen, lime);
+}
+
+.link-page #wrapper {
+  background-color: rgba(0, 76, 0, 0.2);
+}
+
+.link-page h1 {
+  color: #0b300b;
+}
+
+.link-page .link-label {
+  color: #0b300b;
+}
+
+.link-page a:hover {
+  color: #1b951b8f;
+}
+
+.link-page a:visited {
+  color: #74be748a;
+}
+
+.link-page input[type="submit"] {
+  background-color: #133613;
+  color: white;
+}
+
+.link-page input[type="submit"]:hover {
+  background-color: #4fe04f;
+  color: #154e15;
+}
+
+.link-page #error-message {
+  color: #0b300b;
+  text-shadow: #74be748a 1px 1px 0px;
+}
+
+#passwordForm input[type="password"] {
+  width: 90%;
+}
+
+#passwordForm input {
+  margin: 5px auto;
+}

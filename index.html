@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="cache-control" content="max-age=3600">
+    <title>Link Submission</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" crossorigin="anonymous">
+    <link rel="preload" href="css/main.css" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="css/start.css" crossorigin="anonymous" async>
+    <script type="module" src="js/send.js" crossorigin="anonymous" defer></script>
+    <script type="module" src="js/csrf.js" crossorigin="use-credentials"></script>
+  </head>
+  <body class="index-page">
+    <div id="wrapper">
+      <div id="Landbox">
+        <h1>Link Submission</h1>
+        <form id="link-form" action="php/submit.php" method="POST" autocomplete="off">
+          <label for="url" alt="url"></label>
+          <input type="url" id="url" name="url" maxlength="2000" required aria-label="URL Input" autocomplete="new-password" pattern="https?://(www\.)?\S+" title="URL should start with http:// or https://" placeholder="Enter Link Here..">
+          
+          <div id="advancePreMenu" role="button" aria-expanded="false">
+            <span>Advanced Settings:</span>
+            <button type="button" id="toggle-advanced-btn" name="advancedMenu" aria-label="Toggle Advanced Settings"></button>
+          </div>
+
+          <div id="advanced-settings" class="collapsed" aria-hidden="true">
+            <label for="password">Enter a password:</label>
+            <div class="password-container">
+              <input type="password" id="password" name="password" pattern=".{4,}" autocomplete="new-password" maxlength="200"
+              placeholder="****" title="Password must be at least 4 characters long." aria-label="Password Input">
+              <button type="button" id="toggle-password-btn" aria-label="Toggle Password Visibility">👁️</button>
+            </div>
+            
+            <label for="time-limit">Select a time limit:</label>
+            <select id="time-limit" name="time-limit" aria-label="Time Limit Select">
+              <option value="none">None</option>
+              <option value="10m">10 minutes</option>
+              <option value="1h">1 hour</option>
+              <option value="1d">1 day</option>
+              <option value="7">1 week</option>
+              <option value="1M">1 month</option>
+              <option value="1Y">1 year</option>
+            </select>
+
+            <div>
+              <label for="uses">How many uses?</label>
+              <span class="smaller-text">(0 is unlimited)</span>
+            </div>
+            <input id="uses" name="uses" type="number" min="0" max="21" value="0" pattern="[0-9]*" title="0 is unlimited & 21 is max." required aria-label="Uses Input">
+          </div>
+
+          <input type="hidden" id="csrf-token" name="csrf-token" autocomplete="off">
+          <input type="submit" value="Submit" id="submit-btn" aria-label="Submit Button">
+        </form>
+        <div id="error-message" role="alert"></div>
+      </div>
+    </div>
+  </body>
+</html>

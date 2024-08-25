@@ -1,0 +1,230 @@
+/* ===// CSS File Structure //===
+  1. Reset CSS & General rules
+  2. Styles for all pages
+  3. Custom global elements
+  4. Combined styles for landing and link
+  5. Unified scrollbar style
+  ================================ */
+
+/* Reset CSS & General rules */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+}
+
+a {
+  color: #556add;
+  text-decoration: none;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 1.2em;
+  line-height: 2em;
+}
+
+/* Styles for all pages */
+
+/* Elements */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: white;
+  font-family: Helvetica, sans-serif;
+}
+
+button, input, select, input[type="text"], input[type="password"], input[type="submit"] {
+  width: 100%;
+  padding: 10px 4px;
+  margin: 2px auto;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d7d7d7;
+}
+
+select, input[type="text"], input[type="password"] {
+  background-color: white;
+  text-align: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  padding: 4px;
+  font-size: 1.2em;
+}
+
+input[type="submit"] {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Custom global elements */
+
+#wrapper {
+  width: clamp(200px, 80%, 500px);
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  transition: height 0.4s ease-out;
+}
+
+#error-message {
+  padding-top: 10px;
+  font: bold 1.5em Helvetica, sans-serif;
+  color: #efefef;
+  text-shadow: #373636 1px 1px 0px;
+}
+
+#uses {
+  width: -webkit-fill-available;
+  width: -moz-available;
+}
+
+#Landbox {
+  position: relative;
+  margin: 0;
+  height: auto;
+  font-family: Helvetica, sans-serif;
+}
+
+#Landbox h1 {
+  margin-bottom: 10px;
+}
+
+#landing-container,
+#link-container,
+#passwordForm {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: height 0.25s ease, opacity 0.4s ease-in;
+}
+
+#landing-container *,
+#link-container *,
+#passwordForm * {
+  transition: inherit;
+}
+
+.rotate {
+  transform: rotate(90deg);
+}
+
+.link-label {
+  font-size: 1.4em;
+  font-weight: bold;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.link-value {
+  font-size: 1.3em;
+  color: white;
+  text-shadow: #3a613a 1px 1px 1px;
+}
+
+.smaller-text {
+  margin-left: 0.6em;
+  color: #cfcfcf;
+}
+
+/* Combined styles for landing and link */
+.landing-page p,
+.link-page p {
+  transition: height 0.4s ease-out;
+}
+
+.landing-page a,
+.link-page a {
+  display: inline-block;
+  max-width: 100%;
+  padding: 8px 4px;
+  background-color: #000000d8;
+  font-family: Consolas, monospace;
+  word-wrap: break-word;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #303030 #ffffff;
+}
+
+/* Unified scrollbar style */
+
+.landing-page a::-moz-scrollbar,
+.link-page a::-moz-scrollbar,
+.landing-page a::-webkit-scrollbar,
+.link-page a::-webkit-scrollbar {
+  width: 10px;
+}
+
+.landing-page a::-moz-scrollbar-track,
+.link-page a::-moz-scrollbar-track,
+.landing-page a::-webkit-scrollbar-track,
+.link-page a::-webkit-scrollbar-track {
+  background: #303030;
+}
+
+.landing-page a::-webkit-scrollbar-thumb,
+.link-page a::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.landing-page a::-webkit-scrollbar-thumb:hover,
+.link-page a::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+.landing-page a::-moz-scrollbar-thumb,
+.link-page a::-moz-scrollbar-thumb {
+  background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(#555555, #555555) border-box;
+  background-clip: padding-box;
+  border: 1px solid transparent;
+  border-radius: 10px;
+}
+
+.landing-page a::-moz-scrollbar-thumb:hover,
+.link-page a::-moz-scrollbar-thumb:hover {
+  background: linear-gradient(#ffffff, #ffffff) padding-box, linear-gradient(#888888, #888888) border-box;
+  border: 1px solid transparent;
+}

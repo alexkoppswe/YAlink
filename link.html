@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Link Page</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" crossorigin="anonymous">
+    <link rel="preload" href="css/main.css" as="style" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="css/link.css" crossorigin="anonymous" async>
+    <script type="module" src="js/link.js" crossorigin="use-credentials" async></script>
+    <script type="module" src="js/csrf.js" crossorigin="use-credentials"></script>
+  </head>
+  <body class="link-page">
+    <div id="wrapper">
+      <div id="Landbox">
+        <h1 id="message"></h1>
+        <div id="link-container">
+          <p id="link">
+            <a href="#" rel="noopener noreferrer" target="_blank" aria-label="Link"></a>
+          </p>
+          <p id="time-limit">
+            <span class="link-label">Time left: </span>
+            <span class="link-value" title="Days, hours, minutes"></span>
+          </p>
+          <p id="uses">
+            <span class="link-label">Uses: </span>
+            <span class="link-value"></span>
+          </p>
+        </div>
+        <form id="passwordForm" action="link.php" method="POST" autocomplete="off">
+          <input type="hidden" name="csrf_token" value="" autocomplete="off">
+          <input type="hidden" id="link-id" name="id" value="" autocomplete="off">
+          <input type="password" name="password" required autofocus autocomplete="new-password" maxlength="200" placeholder="Enter password.." aria-label="Password">
+          <input type="submit" value="Submit">
+        </form>
+        <button id="back-button" aria-label="Go to Start">Go to Start</button>
+      </div>
+      <div id="error-message"></div>
+    </div>
+  </body>
+</html>
