@@ -13,9 +13,9 @@ Yet Another link shortener with password protection and temporary link hosting
 - Note that the JS validation can be customized for your needs, and there is no server lockout for brute force attacks on passwords.
 
 ## Images
-![use](https://github.com/user-attachments/assets/0dca6f5e-f808-4964-8fa3-89fb6cbd3b01)
-* Note, the <select> menu dosent show in image.
-
+![use](https://github.com/user-attachments/assets/0dca6f5e-f808-4964-8fa3-89fb6cbd3b01)<br>
+- * Note, the options menu dosent show in image.*  
+  
 ## Prerequisites
 - PHP installed (Developed on v8.0+)
 - A web server (e.g. Apache, Nginx)
