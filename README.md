@@ -32,12 +32,12 @@ To configure follow these steps:
 
 as well as enable SSL in `token.php` (or move it to `config.php`).
 
-## Contributing
-🤝 We welcome contributions to the YAlink project. If you would like to contribute, please follow these guidelines:
-- Fork the YAlink repository on GitHub.
-- Create a new branch for your feature or bug fix.
-- Make your changes and ensure they are properly tested.
-- Submit a pull request to the main repository, explaining the changes you have made.
+
+## 🤝 Contributing
+
+Contributions are welcome just submit a pull request or donate a coffee.
+
+<a href='https://ko-fi.com/X8X11DTGJQ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 ## License
 📄 YAlink is released under the GNU Affero General Public License. See the `LICENSE.txt` file for more information.
